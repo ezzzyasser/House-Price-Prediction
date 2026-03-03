@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Housing Price Prediction</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 20px;
+            }
+            form {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            label {
+                display: block;
+                margin-bottom: 8px;
+            }
+            input[type="text"], input[type="radio"], input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 12px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+            input[type="submit"] {
+                background-color: #3498db;
+                color: white;
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+            input[type="submit"]:hover {
+                background-color: #2980b9;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Housing Price Prediction</h1>
+    <form method="POST">
+        <label for="longitude">Longitude:</label>
+        <input type="float" name="longitude" required><br><br>
+
+        <label for="latitude">Latitude:</label>
+        <input type="float" name="latitude" required><br><br>
+
+        <label for="housing_median_age">Housing Median Age:</label>
+        <input type="float" name="housing_median_age" required><br><br>
+
+        <label for="total_rooms">Total Rooms:</label>
+        <input type="float" name="total_rooms" required><br><br>
+
+        <label for="total_bedrooms">Total Bedrooms:</label>
+        <input type="float" name="total_bedrooms" required><br><br>
+
+        <label for="population">Population:</label>
+        <input type="float" name="population" required><br><br>
+
+        <label for="households">Households:</label>
+        <input type="float" name="households" required><br><br>
+
+        <label for="median_income">Median Income:</label>
+        <input type="float" name="median_income" required><br><br>
+
+        <label for="ocean_proximity">Ocean Proximity:</label>
+        <input type="radio" name="ocean_proximity" value="NEAR BAY"> Near Bay
+        <input type="radio" name="ocean_proximity" value="INLAND"> Inland
+        <input type="radio" name="ocean_proximity" value="<1H OCEAN"> &lt;1H Ocean
+        <input type="radio" name="ocean_proximity" value="ISLAND"> Island
+        <input type="radio" name="ocean_proximity" value="NEAR OCEAN"> Near Ocean<br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
